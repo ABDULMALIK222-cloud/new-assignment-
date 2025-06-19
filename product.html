@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Products</title>
+  <meta name="description" content="Browse our wide selection of quality products with competitive prices.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, main, footer {
+      padding: 1rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    article {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #fff;
+    }
+    article img {
+      width: 100%;
+      height: auto;
+    }
+    h1, h2 {
+      margin: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Featured Products</h1>
+    <p>Discover our latest range of high-quality products at great prices.</p>
+  </header>
+
+  <main>
+    <section class="product-grid" aria-label="Product List">
+      
+      <!-- Product Item -->
+      <article itemscope itemtype="https://schema.org/Product">
+        <img src="product1.jpg" alt="Red Cotton T-Shirt" itemprop="image">
+        <h2 itemprop="name">Red Cotton T-Shirt</h2>
+        <p itemprop="description">Soft and breathable cotton t-shirt, perfect for everyday wear.</p>
+        <p><strong itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.99">19.99</span>
+        </strong></p>
+      </article>
+
+      <!-- Another Product -->
+      <article itemscope itemtype="https://schema.org/Product">
+        <img src="product2.jpg" alt="Leather Wallet - Brown" itemprop="image">
+        <h2 itemprop="name">Leather Wallet - Brown</h2>
+        <p itemprop="description">Durable genuine leather wallet with multiple compartments.</p>
+        <p><strong itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="39.99">39.99</span>
+        </strong></p>
+      </article>
+
+      <!-- More products can follow in similar structure -->
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YourStore Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
