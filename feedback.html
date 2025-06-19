@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin: 12px 0 4px;
+    }
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+    fieldset {
+      margin-bottom: 16px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    .sr-only {
+      position: absolute;
+      left: -9999px;
+    }
+    button {
+      padding: 10px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Feedback Form</h1>
+  <p>Please help us improve by sharing your thoughts.</p>
+
+  <form action="/submit-feedback" method="post" aria-labelledby="feedback-heading">
+    
+    <label for="email">Email address <span aria-hidden="true">*</span></label>
+    <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-desc">
+    <small id="email-desc">We'll only use this to contact you if needed.</small>
+
+    <fieldset>
+      <legend>How do you feel about our new website? <span aria-hidden="true">*</span></legend>
+      <div>
+        <input type="radio" id="excellent" name="opinion" value="Excellent" required>
+        <label for="excellent">Excellent</label>
+      </div>
+      <div>
+        <input type="radio" id="good" name="opinion" value="Good">
+        <label for="good">Good</label>
+      </div>
+      <div>
+        <input type="radio" id="average" name="opinion" value="Average">
+        <label for="average">Average</label>
+      </div>
+      <div>
+        <input type="radio" id="poor" name="opinion" value="Poor">
+        <label for="poor">Poor</label>
+      </div>
+    </fieldset>
+
+    <label for="suggestions">Any suggestions?</label>
+    <textarea id="suggestions" name="suggestions" rows="5" placeholder="Let us know how we can improve..." aria-describedby="suggestions-desc"></textarea>
+    <small id="suggestions-desc">Optional, but we’d love to hear your ideas.</small>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+</body>
+</html>
